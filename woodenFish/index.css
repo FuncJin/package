@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  user-select: none;
+}
+
+.page-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wooden-fish {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+}
+
+.w-f-container {
+  width: 300px;
+  height: 230px;
+  position: relative;
+}
+
+.w-f-c-img {
+  width: 100%;
+  height: 100%;
+}
+
+.w-f-c-text p {
+  width: 100%;
+  font-size: 28px;
+  color: #fff;
+  text-align: center;
+  position: absolute;
+  animation: wooden-fish-text-move 1s forwards;
+}
+
+.w-f-c-i-size {
+  animation: wooden-fish-size 0.3s;
+}
+
+@keyframes wooden-fish-text-move {
+  0% {
+    top: -60px;
+    opacity: 1;
+  }
+  100% {
+    top: -110px;
+    opacity: 0;
+  }
+}
+
+@keyframes wooden-fish-size {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media (min-width: 768px) {
+  .w-f-container {
+    width: 500px;
+    height: 380px;
+  }
+}
