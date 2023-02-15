@@ -46,7 +46,7 @@ const toggleFullScreen = () => {
 dom.woodenFish.addEventListener("click", () => {
     woodenFish.size()
     woodenFish.createText()
-    dom.audio.load()
+    dom.audio.currentTime = 0
     dom.audio.play()
     vibrate()
 })
