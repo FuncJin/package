@@ -1,3 +1,8 @@
+/**
+ * 《心血来潮，这次我用代码“敲”木鱼》
+ * https://juejin.cn/post/7199660596735164475
+ */
+
 const dom = {
     woodenFish: document.querySelector("img"),
     text: document.querySelector(".w-f-c-text"),
@@ -15,7 +20,7 @@ const woodenFish = {
     createText: () => {
         const p = document.createElement("p")
         p.innerText = "功德+1"
-        return p
+        dom.text.appendChild(p)
     }
 }
 // 振动
@@ -40,7 +45,8 @@ const toggleFullScreen = () => {
 
 dom.woodenFish.addEventListener("click", () => {
     woodenFish.size()
-    dom.text.appendChild(woodenFish.createText())
+    woodenFish.createText()
+    dom.audio.load()
     dom.audio.play()
     vibrate()
 })
